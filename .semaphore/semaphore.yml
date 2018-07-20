@@ -1,9 +1,10 @@
-version: "v1.0-beta-task"
-name: First pipeline example
+version: "v1.0"
+name: First pipeline examplessds
 agent:
   machine:
     type: e1-standard-2
-    os_image: ubuntu1404
+    os_image: ubuntu1804
+
 
 blocks:
   - name: "Build"
@@ -11,8 +12,28 @@ blocks:
       env_vars:
         - name: APP_ENV
           value: prod
+        - name: ENVV
+          value: something
       jobs:
+
       - name: Docker build
+
+        commands:
+          - checkout
+          - ls -1
+          - echo $APP_ENV
+          - echo "Docker build..."
+          - echo "done"
+          - echo $AWS_KEY
+          - echo $AWS_SECRET
+      - name: Docker build img2
+        commands:
+          - checkout
+          - ls -1
+          - echo $APP_ENV
+          - echo "Docker build..."
+          - echo "done"
+      - name: Docker build img3
         commands:
           - checkout
           - ls -1
