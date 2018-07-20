@@ -5,6 +5,7 @@ agent:
     type: e1-standard-2
     os_image: ubuntu1804
 
+
 blocks:
   - name: "Build"
     task:
@@ -14,7 +15,9 @@ blocks:
         - name: ENVV
           value: something
       jobs:
-      - name: Docker build image1
+
+      - name: Docker build
+
         commands:
           - checkout
           - ls -1
