@@ -8,6 +8,7 @@ agent:
 blocks:
   - name: Fetch deps
     task:
+      run_on_change: "backend/**/*"
       jobs:
       - name: Download and cache
         commands:
