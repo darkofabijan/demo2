@@ -29,23 +29,16 @@ promotions:
     pipeline_file: deploy.yml
     parameters: 
       env_vars:
-        - name: SERVER_IP
-          description: Tip what user should enter
-          dafault_value: "192.168.1.1"
-        - name: SERVER_HOSTNAME
-          dafault_value: "192.168.1.1"
-          required: false
-        - name: SERVER_COLOR
-          required: false
-        
-        
         - name: TARGET
-          description: Lorem impsum
+          description: Select your targer server
           dafault_value: "C"
           options: 
             - "A"
             - "B"
             - "C" 
+
+
+
 
         # Simplest example
         - name: SERVER_IP
