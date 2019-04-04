@@ -29,12 +29,17 @@ promotions:
     pipeline_file: deploy.yml
     parameters: 
       env_vars:
-        # Simplest example - everything is required
         - name: SERVER_IP
+          description: Tip what user should enter
+          dafault_value: "192.168.1.1"
         - name: SERVER_HOSTNAME
+          dafault_value: "192.168.1.1"
+          required: false
         - name: SERVER_COLOR
+          required: false
         
-        - name: TARGER
+        
+        - name: TARGET
           description: Lorem impsum
           dafault_value: "C"
           options: 
@@ -49,6 +54,7 @@ promotions:
           description: Bla bla
         - name: SERVER_COLOR
           description: Bla bla
+          required: false
 
         # The value passed must be one from the list. In UI we merge default with values and select defaut. 
         # In API if some value which is different from default + values is sent we reject
