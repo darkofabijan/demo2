@@ -29,13 +29,20 @@ promotions:
     pipeline_file: deploy.yml
     parameters: 
       env_vars:
-        - name: TARGET
-          description: Select your targer server
-          dafault_value: "C"
+        - name: SERVER_IP
+          required: false
+          description: Lorem impsum      
           options: 
-            - "A"
-            - "B"
-            - "C" 
+            - "192.158.23.23"
+            - "192.158.23.23"
+        - name: SERVER_COLOR
+          description: Select your targer server
+          dafault_value: "Red"
+          options: 
+            - "Yellow"
+            - "Green"
+            - "Red"
+            - "Blue"
 
 
 
